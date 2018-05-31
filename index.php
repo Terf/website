@@ -47,8 +47,8 @@ else {
           <img src="images/pic.jpg" alt="">
           <h1>Tim Robert-Fitzgerald</h1>
           <p style="padding: 10px">I'm a computer science major at Oberlin College. I work as a fellow for <a href="https://github.com/EnvironmentalDashboard">Environmental Dashboard</a>, mostly building web/iOS applications for visualizing resource consumption. You can find my work on <a href="https://github.com/Terf">GitHub</a> and <a href="http://codepen.io/terf/">CodePen</a>. The background of this website is <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's game of life</a>.</p>
-          <div class="spacer"></div>
-          <p style="text-align: center;"><a href="#" onclick="flip()" class="btn">Contact me</a></p>
+          <p style="float: left;padding: 10px"><a href="#" onclick="flip()" class="btn">Send message</a></p>
+          <p style="float: right;padding: 10px"><a class="btn" href="TimRobertFitzgerald.pdf">View resume</a></p>
         </div> 
         <div class="face back">
           <h1>Contact me</h1>
