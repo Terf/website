@@ -25,7 +25,7 @@ else {
     <meta name="description" content="Tim Robert-Fitzgerald is a computer science major at Oberlin College">
     <meta name="author" content="Tim Robert-Fitzgerald">
     <title>Tim Robert-Fitzgerald</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <!-- Open Graph data -->
     <meta property="og:title" content="Tim Robert-Fitzgerald" />
