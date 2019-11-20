@@ -31,7 +31,7 @@ else {
     <meta property="og:title" content="Tim Robert-Fitzgerald" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Tim Robert-Fitzgerald"/>
-    <meta property="og:description" content="Tim Robert-Fitzgerald is a computer science major at Oberlin College" />
+    <meta property="og:description" content="Tim Robert-Fitzgerald is a recent Oberlin College computer science grad" />
   </head>
   <body>
     <svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -44,9 +44,10 @@ else {
     <div class="flip"> 
       <div class="card" id="card">
         <div class="face front">
-          <img src="images/pic.jpg" alt="">
+          <img src="images/pic.jpg" alt="Profile picture of Tim Robert-Fitzgerald">
           <h1>Tim Robert-Fitzgerald</h1>
-          <p style="padding: 10px">I'm a computer science major at Oberlin College. I work as a fellow for <a href="https://github.com/EnvironmentalDashboard">Environmental Dashboard</a>, mostly building web/iOS applications for visualizing resource consumption. You can find my work on <a href="https://github.com/Terf">GitHub</a> and <a href="http://codepen.io/terf/">CodePen</a>. The background of this website is <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's game of life</a>.</p>
+          <p style="padding: 10px">I'm a recent OCCS grad currently working with an Oberlin ENVS professor on a startup called CommunityHub, an environmentally-focused communication platform. My work involves wrangling data, building web/mobile applications for visualizing resource consumption, and developing desktop (macOS, Windows, Linux) based interactive digital signs.</p>
+          <p style="padding: 10px">The background of this website is <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's game of life</a>.</p>
           <p style="float: left;padding: 10px"><a href="#" onclick="flip()" class="btn">Send message</a></p>
           <p style="float: right;padding: 10px"><a class="btn" href="TimRobertFitzgerald.pdf">View resume</a></p>
         </div> 
@@ -103,7 +104,7 @@ else {
         var to_revive = [];
         for (var row = 0; row < num_rows/10; row++) {
           for (var col = 0; col < num_columns; col++) {
-            var alive_neighbours = 0;
+            var alive_neighbors = 0;
             var c1 = document.getElementById('row'+(row-1)+'col'+(col-1));
             var c2 = document.getElementById('row'+(row-1)+'col'+(col));
             var c3 = document.getElementById('row'+(row-1)+'col'+(col+1));
@@ -112,27 +113,27 @@ else {
             var c6 = document.getElementById('row'+(row+1)+'col'+(col-1));
             var c7 = document.getElementById('row'+(row+1)+'col'+(col));
             var c8 = document.getElementById('row'+(row+1)+'col'+(col+1));
-            if (c1 != null && c1.getAttribute('fill') === alive) {alive_neighbours++;}
-            if (c2 != null && c2.getAttribute('fill') === alive) {alive_neighbours++;}
-            if (c3 != null && c3.getAttribute('fill') === alive) {alive_neighbours++;}
-            if (c4 != null && c4.getAttribute('fill') === alive) {alive_neighbours++;}
-            if (c5 != null && c5.getAttribute('fill') === alive) {alive_neighbours++;}
-            if (c6 != null && c6.getAttribute('fill') === alive) {alive_neighbours++;}
-            if (c7 != null && c7.getAttribute('fill') === alive) {alive_neighbours++;}
-            if (c8 != null && c8.getAttribute('fill') === alive) {alive_neighbours++;}
-            // console.log(document.getElementById('row'+(row)+'col'+(col)), alive_neighbours);
+            if (c1 != null && c1.getAttribute('fill') === alive) {alive_neighbors++;}
+            if (c2 != null && c2.getAttribute('fill') === alive) {alive_neighbors++;}
+            if (c3 != null && c3.getAttribute('fill') === alive) {alive_neighbors++;}
+            if (c4 != null && c4.getAttribute('fill') === alive) {alive_neighbors++;}
+            if (c5 != null && c5.getAttribute('fill') === alive) {alive_neighbors++;}
+            if (c6 != null && c6.getAttribute('fill') === alive) {alive_neighbors++;}
+            if (c7 != null && c7.getAttribute('fill') === alive) {alive_neighbors++;}
+            if (c8 != null && c8.getAttribute('fill') === alive) {alive_neighbors++;}
+            // console.log(document.getElementById('row'+(row)+'col'+(col)), alive_neighbors);
             var curr_cell = document.getElementById('row'+(row)+'col'+(col));
             if (curr_cell.getAttribute('fill') === alive) {
-              if (alive_neighbours < 2 || alive_neighbours > 3) {
+              if (alive_neighbors < 2 || alive_neighbors > 3) {
                 to_kill.push(curr_cell);
               }
             }
             else {
-              if (alive_neighbours === 3) {
+              if (alive_neighbors === 3) {
                 to_revive.push(curr_cell);
               }
             }
-            alive_neighbours = 0;
+            alive_neighbors = 0;
           }
         }
         while (to_kill.length > 0) {
