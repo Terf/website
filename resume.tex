@@ -1,0 +1,306 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+%\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{changepage}
+\setlength{\textwidth}{5.2in} % set width of text portion
+% See: https://tex.stackexchange.com/a/139934
+\newcommand\rurl[1]{%
+  \href{http://#1}{\nolinkurl{#1}}%
+}
+%\renewcommand{\sl}{\bfseries}
+
+%\newenvironment{absolutelynopagebreak}
+%  {\par\nobreak\vfil\penalty0\vfilneg
+%   \vtop\bgroup}
+%  {\par\xdef\tpd{\the\prevdepth}\egroup
+%   \prevdepth=\tpd}
+   
+% See: https://tex.stackexchange.com/questions/52503/sign-in-international-phone-numbers
+\usepackage{amssymb,graphicx}
+\newcommand{\Plus}{\raisebox{.4\height}{\scalebox{.6}{+}}}
+\newcommand{\bDiamond}{\mathbin{\Diamond}}
+\newcommand{\bLozenge}{\mathbin{\blacklozenge}}
+
+\begin{document}
+% https://tex.stackexchange.com/questions/24186/how-to-center-text-without-adding-space-and-not-altering-alignment-of-surroundin
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{%
+  \end{center}
+}
+
+\enlargethispage{45pt} % so last section doesnt get pushed to new page
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\large\bf Timothy E. Robert-Fitzgerald}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+\urlstyle{same}
+%  \moveleft.5\hoffset\centerline{
+%  \rurl{github.com/Terf}
+%  \kern 1em \textasteriskcentered \kern 1.2em
+%  \rurl{cs.oberlin.edu/~trobertf/}
+%  \kern 1em \textasteriskcentered \kern 1.2em
+%  \rurl{linkedin.com/in/timrf}
+%  }
+ %\moveleft.5\hoffset\centerline{6519 N. Fairfield Ave, Chicago IL 60645}
+ %\moveleft.5\hoffset\centerline{Chicago, IL 60645}
+ 
+ 
+%  \moveleft.5\hoffset\centerline{tim.terf@gmail.com \kern 0.5em \textasteriskcentered \kern 0.9em (312) 576-9620 \kern 0.5em \textasteriskcentered \kern 0.9em \rurl{linkedin.com/in/timrf}}
+
+
+\moveleft.5\hoffset\centerline{tim.terf@gmail.com
+\hfill
+$\bDiamond$
+\hfill
+\rurl{github.com/Terf}
+\hfill
+$\bDiamond$
+\hfill
+\rurl{linkedin.com/in/timrf}}
+
+\begin{resume}
+
+%\section{OBJECTIVE}  A position developing server systems and web applications, with special interests in machine learning and user experience design.
+
+\vspace{-0.5em}\\
+\section{EDUCATION} Oberlin College, Oberlin OH\\
+B.A., dual major in Computer Science and Politics (May 2019)\\
+% Relevant Coursework: Data Structures, Systems Programming, Programming Abstractions, Computer Architecture, Algorithms, Artificial Intelligence, Machine Learning and Data Mining, Privacy and Social Networks, Computer and Information Security, Theory of Computation
+% \sl will be bold italic in New Century Schoolbook (or any postscript font) and just slanted in Computer Modern (default) font
+\vspace{-2.5em}\\
+\section{SKILLS}
+%\textit{Languages}\\
+%\hspace*{5mm} JavaScript, PHP, Python, Java, Go, C, C\Plus\Plus, shell scripting, Assembly (MIPS), Scheme, R, SQL, HTML/CSS\\
+\textbf{Frontend web development}\\
+\vspace{-2.5em}\\
+\begin{adjustwidth}{5mm}{}
+JavaScript / TypeScript (React.js, React Native, Electron, D3.js, vtk.js)\\
+\end{adjustwidth}
+\vspace{-2em}\\
+
+\textbf{Backend web development}\\
+\vspace{-2.5em}\\
+\begin{adjustwidth}{5mm}{}
+PHP (Symfony, Doctrine ORM, Composer), Node.js (Express.js), Python (Flask)\\
+\end{adjustwidth}
+\vspace{-2em}\\
+
+\textbf{Data science}\\
+\vspace{-2.5em}\\
+\begin{adjustwidth}{5mm}{}
+Python (Keras, Numpy, Pandas, Nipype), R\\% (Tidyverse, dplyr)\\
+\end{adjustwidth}
+\vspace{-2em}\\
+
+% could also group java as server side / backend / application development
+\textbf{Object-oriented, functional and systems programming}\\
+\vspace{-2.5em}\\
+\begin{adjustwidth}{5mm}{}
+Java, Scheme, Go, C, Assembly (MIPS)\\
+\end{adjustwidth}
+\vspace{-2em}\\
+%React.js, React Native, Electron, D3.js, vtk.js\\
+%\textit{Backend tools}
+% \textit{JavaScript}\\
+% \hspace*{5mm} React.js, React Native, Electron, D3.js, vtk.js\\
+% % webpack?
+% \vspace{-1.05em}\\
+% \textit{PHP}\\
+% \hspace*{5mm} Symfony, Doctrine ORM, Composer\\
+% \vspace{-1.05em}\\
+% \textit{Python}\\
+% \hspace*{5mm} Flask, Keras, Numpy, Pandas, Nipype\\
+% \vspace{-1.05em}\\
+% \textit{R}\\
+% \hspace*{5mm} Tidyverse, dplyr, neuroimaging wrappers (ANTsR, fslr, freesurfer)\\
+% \vspace{-1.05em}\\
+% %\textit{Java}\\
+% %\hspace*{5mm} JUnit, Maven, Lucene\\
+% \vspace{-1.05em}\\
+% \textit{C}\\
+% \hspace*{5mm} Make, gdb, valgrind\\
+% \vspace{-1.05em}\\
+
+\textbf{Shell scripting}\\
+\vspace{-2.5em}\\
+\begin{adjustwidth}{5mm}{}
+Version control (git, git annex), containers (docker, singularity)\\
+\end{adjustwidth}
+\vspace{-2em}\\
+
+\textbf{Database administration}\\
+\vspace{-2.5em}\\
+\begin{adjustwidth}{5mm}{}
+MySQL, SQLite, MongoDB, Redis, Cassandra\\
+\end{adjustwidth}
+\vspace{-2em}\\
+
+\textbf{System administration}\\
+\vspace{-2.5em}\\
+\begin{adjustwidth}{5mm}{}
+Site reliability (corosync, Pacemaker, HAProxy), HTTP servers (Apache, Nginx), SMTP servers (Postfix), cloud platforms (AWS, DigitalOcean), Ansible, GitHub Actions, Prometheus, Grafana\\
+\end{adjustwidth} \\
+% \vspace{-1.05em}\\
+% \vspace{-1.05em}\\
+% \textit{Go}\\
+% \hspace*{5mm} DRMAA\\
+% \vspace{-1.05em}\\
+% \textit{C}\\
+% \hspace*{5mm} Make, gdb, valgrind\\
+% \vspace{-1.05em}\\
+%\iffalse
+%\underline{\smash{Languages:}}
+%JavaScript, PHP, Python, Java, C, C\Plus\Plus, shell scripting, Assembly (MIPS), Scheme, R, SQL, HTML/CSS\\
+%\vspace{-1.05em}\\
+% \textit{\smash{Database administration}}\\
+% \hspace*{5mm} MySQL, SQLite, MongoDB, Redis, Cassandra\\
+% \vspace{-1.05em}\\
+% \textit{\smash{System administration}}\\
+% \hspace*{5mm} Docker, Ansible, Travis CI, Prometheus, Grafana, site reliability (corosync, Pacemaker, HAProxy), HTTP servers (Apache, Nginx), SMTP servers (Postfix), cloud providers (AWS, DigitalOcean)
+%\vspace{-1.05em}\\
+%\underline{\smash{JavaScript tools:}}
+%React.js, React Native, Electron, Node.js, D3.js, jQuery, Webpack%, npm
+%\vspace{-1.05em}\\
+%\underline{\smash{PHP tools:}}
+%Symfony, Doctrine ORM, Composer\\
+%\vspace{-1.05em}\\
+%\underline{\smash{Java tools:}}
+%JUnit, Maven, Lucene\\
+%\vspace{-1.05em}\\
+%\underline{\smash{Machine learning tools:}}
+%TensorFlow, Keras, Numpy, Pandas
+%\underline{\smash{DevOps:}}
+%Docker, Travis CI, AWS, Webpack
+%\underline{\smash{System Adminastration:}}
+%Apache, Nginx, HAProxy, corosync, pacemaker
+%\fi
+% {\sl Languages:}
+% C, C\Plus\Plus, Java, Python, PHP, JavaScript, Scheme, SQL, R, shell scripting, HTML/XSLT, CSS/SCSS, Assembly (MIPS)\\
+% \vspace{-0.77em}\\
+%{\sl Experienced with:}
+%Architectural concepts (MVC, OOP, RESTful APIs, containerized/distributed microservices), DevOps (Docker, Travis CI, AWS, Webpack), server administration (Apache, Nginx, HAProxy, corosync, pacemaker), database administration (MySQL, PostgreSQL, SQLite, MongoDB, Redis), PHP frameworks (Symfony, Doctrine ORM, Composer), JavaScript frameworks (node.js, electron.js, d3.js, jQuery), Java frameworks (Lucene, JUnit, Maven), embedded systems (Arduino, SDR), machine learning (TensorFlow, Keras, Numpy, Pandas)
+% %Docker, Travis CI, Webpack, AWS, web servers (Apache, nginx), Arduino, Symfony, Lucene, TensorFlow, Keras, d3.js, node.js
+\vspace{-1em}\\
+\section{EXPERIENCE}
+\textbf{Research programmer at PennSIVE center}\\
+\textbf{University of Pennsylvania} \hfill        February 2020 - Present\\
+As a programmer working with statisticians, my responsibilities range from informatics and data processing to GUI development. %During my time I collaborated on a number of studies and was a co-author on several papers, including first author on an abstract submitted to ECTRIMS.
+\begin{itemize}
+    \item Co-author on a number of published papers, including first author on an abstract accepted at the ECTRIMS 2021 conference
+    \item Established lab best-practices such as the use of git and datalad
+    \item Developed web apps for data visualization, QC
+\end{itemize}
+% https://doi.org/10.1177/13524585211044667
+% \begin{itemize}
+% % https://onlinelibrary.wiley.com/doi/10.1002/hbm.25577
+%     \item A simple permutation-based test of intermodal correspondence; DOI: 10.1002/hbm.25577
+% https://www.biorxiv.org/content/10.1101/2020.12.23.424020v3
+% https://doi.org/10.1101/2020.12.23.424020
+%     \item Automated Analysis of Low-Field Brain MRI in Cerebral Malaria; DOI: 10.1101/2020.12.23.424020
+% \end{itemize}
+%The Penn Statistics in Imaging and Visualization Endeavor (PennSIVE) center consists of a group of statisticians studying etiology and clinical practice through medical imaging.  %I built tools to make neuroimaging tools easier to use, including the Penn Image Processing Portal: https://ipp.cbica.upenn.edu
+
+\textbf{Web developer at Environmental Dashboard}\\
+\textbf{Oberlin College} \hfill        May 2016 - February 2020\\
+%Environmental Dashboard (\rurl{environmentaldashboard.org}) makes the invisible flows of water and electricity through communities visible and engaging.%  the latter half of which I worked as team lead with other student programmers. As a full stack web developer, I built, maintained, and ensured the CI/CD of web apps which were featured on kiosks across Oberlin, the Toledo public school district, the Great Lakes Science Center, and \underline{\href{http://www.oberlin.net/channel-lineup-downloads/}{local cable channel 10}}, as well as managed the supporting database and server systems
+%\iffalse
+%As a full stack web developer, my responsibilities included building and deploying web apps as well as managing database and server systems.
+% Primarily a web developer, I built web apps for visualizing resource consumption. However, my responsibilities also included more technical tasks such as system and database administration.
+Developed web apps for visualizing resource consumption and managed the supporting database and server systems.
+
+  \begin{itemize}
+    \item Built, maintained, and ensured the CI/CD of web apps which were featured on kiosks across Oberlin, the Toledo public school district and the Great Lakes Science Center %\underline{\href{http://www.oberlin.net/channel-lineup-downloads/}{local cable channel 10}}%, as well as managed the supporting database and server systems %expanding to Akron public schools, Cleveland 2030, the Mayor's Office of Sustainability and the North East Ohio Sewer District
+    \item Worked as team lead with other student programmers%; overall, I contributed over 100,000 lines of code: \textit{\rurl{github.com/EnvironmentalDashboard}}
+    %\item Wrote a high-performance data collection daemon in C which perpetually fetches dozens of data points per second from a third-party HTTP JSON-based API which uses OAuth 2.0 authentication for caching in a local MySQL database
+    %\item Website has over a thousand unique monthly users and growing
+    %\item Built a popular community calendar for Oberlin at \textit{\rurl{environmentaldashboard.org/calendar/}}, which other organizations feature in their website (see \underline{\href{http://oberlin.org/events/}{OBP}})%, \underline{\href{https://www.benfranklinoberlin.com/venue}{Ben Franklin}})
+  \end{itemize}
+
+% {\sl Internship at Pulse Insights} \hfill        Summer 2018 \\
+% Pulse Insights is a quickly growing startup that helps corporate clients gather actionable data through embeddable feedback surveys. During my internship I wrote a Google Chrome browser extension and designed surveys for large corporate clients, including Benjamin Moore and Transunion.
+
+  %\begin{itemize}
+    %\item Wrote a Google Chrome browser extension that facilitated showing demos to potential clients
+    %\item Designed surveys for large corporate clients, including Benjamin Moore and Transunion
+  %\end{itemize}
+%\fi
+% {\sl Freeelance Projects} \hfill \\
+% Worked as a freelance web developer, creating production websites for:
+%   \begin{itemize}  \itemsep -2pt
+%     \item StoryIt LLC, a digital sports yearbook and newsletter: \textit{\rurl{storyoftheseason.com}}
+%     %\item Catharina Meints, a professor in the Oberlin Conservatory of Music: \mbox{\textit{\rurl{catharinameints.com}}}
+%     \item A professor in the Oberlin Conservatory of Music: \textit{\rurl{catharinameints.com}}
+%     \item Veterans For Peace: \textit{\rurl{educationnotmilitarization.org}}
+%   \end{itemize}
+% {\sl Awards} \hfill \\
+%   \begin{itemize}
+%   \vspace*{-0.3cm}
+%     \item Bonner Center Award for Student Excellence in Community Engagement \mbox{(April 2018).}
+%   \end{itemize}
+%\section{AWARDS}
+%{\sl Bonner Center Award for Student Excellence in Community Engagement} \hfill        (April 2018) \\
+%\pagebreak % MAYBE REMOVE? 
+
+% \section{SKILLS} {\sl Languages} \\
+%   \begin{itemize}  \itemsep -2pt
+%     \item In \textbf{C} I built a POSIX shell \& a high performance data collection daemon which makes over 1,000 queries per min (\textit{\rurl{github.com/EnvironmentalDashboard/buildingos-api-daemons}}).
+%     \item In \textbf{PHP} I have written thousands of scripts and webpages. I have experience with MVC frameworks such as Symfony.
+%     \item In \textbf{Java} I have used Lucene to build a search engine.
+%     \item In \textbf{JavaScript} I built a d3.js powered time series (\textit{\rurl{environmentaldashboard.org/chart/}}). I am also familiar with node.js.
+%     \item In \textbf{Python} I have used TensorFlow for a variety of machine learning projects, such as an image recognition algorithm.
+%     \item In \textbf{Scheme} I built an interpreter.
+    
+%   \end{itemize}
+ 
+%  {\sl System Administration} \\
+%   \begin{itemize}  \itemsep -2pt
+%       \item Familiar with shell scripting, containerized architecture (Docker), the Apache/nginx web servers, DNS.
+
+%     \end{itemize}
+% {\sl Database Administration} \\
+%   \begin{itemize}  \itemsep -2pt
+%       \item Oversaw production database with 49 tables, receiving over 1,000 queries per minute.
+
+%     \end{itemize}
+\vspace{-0.5em}\\
+\section{PROJECTS}
+Most code I wrote for Environmental Dashboard and PennSIVE is private, but some public code includes:
+% of my public code can be accessed on GitHub:
+\begin{itemize}
+    \item Penn Image Processing Portal (\rurl{github.com/CBICA/IPP-fe}, \rurl{github.com/CBICA/IPP-be}, \rurl{github.com/CBICA/IPP-API})
+    \item GWAS browser for Penn publication (\rurl{github.com/anbai106/bridgeport},\\ \rurl{www.cbica.upenn.edu/bridgeport})
+    \item Music archive of an Oberlin professor (\rurl{github.com/Terf/cathy-meints},\\ \rurl{catharinameints.com})
+    % \item \rurl{educationnotmilitarization.org}
+    \item Time series prediction applied to energy usage (\rurl{github.com/Terf/CSCI374}) and the stock market (\rurl{github.com/Terf/Trader})
+    % \item github.com/Terf/CSCI374
+    % \item Stock market trading bot (github.com/Terf/Trader)
+\end{itemize}
+
+%\section{REFERENCES} References available upon request.\\
+% \section{REFERENCES} {\sl John E. Petersen}\\
+% Paul Sears Professor of Environmental Studies and Biology\\
+% Director of Environmental Dashboard\\
+% john.petersen@oberlin.edu
+
+% {\sl Pablo Rojas}\\
+% Co-Founder at Pulse Insights\\
+% projas@pulseinsights.com
+
+% \vspace{0.5em}
+% More references available upon request.\\
+
+
+\end{resume}
+\end{document}
+
+
+
+
