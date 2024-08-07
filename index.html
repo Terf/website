@@ -1,20 +1,3 @@
-<?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
-if (isset($_POST['submit'])) {
-  $to = 'tim.terf@gmail.com';
-  $subject = $_POST['subject'];
-  $message = $_POST['message'];
-  $headers = 'From: trobertf@oberlin.edu' . "\r\n" .
-      'Reply-To: trobertf@oberlin.edu' . "\r\n" .
-      'X-Mailer: PHP/' . phpversion();
-  mail($to, $subject, $message, $headers);
-  $form_submitted = true;
-}
-else {
-  $form_submitted = false;
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,25 +14,21 @@ else {
     <meta property="og:title" content="Tim Robert-Fitzgerald" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Tim Robert-Fitzgerald"/>
-    <meta property="og:description" content="Tim Robert-Fitzgerald is a recent Oberlin College computer science grad" />
+    <meta property="og:description" content="Tim Robert-Fitzgerald is a software engineer at Near-Miss Management" />
   </head>
   <body>
     <svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
     <!-- See http://jsfiddle.net/rsadwick/zwWHY/ for card source -->
-    <?php
-    if ($form_submitted) {
-      echo "<div class='alert'><b>Success!</b> Your message has been sent</div>";
-    }
-    ?>
     <div class="flip"> 
       <div class="card" id="card">
         <div class="face front">
-          <img src="images/pic.jpg" alt="Profile picture of Tim Robert-Fitzgerald">
+          <img src="images/pic.jpeg" alt="Profile picture of Tim Robert-Fitzgerald">
           <h1>Tim Robert-Fitzgerald</h1>
-          <p style="padding: 10px">I'm a recent OCCS grad currently working with an Oberlin ENVS professor on a startup called CommunityHub, an environmentally-focused communication platform. My work involves wrangling data, building web/mobile applications for visualizing resource consumption, and developing desktop (macOS, Windows, Linux) based interactive digital signs.</p>
+          <p style="padding: 10px">I'm a software engineer at Near-Miss Management, a risk management platform. As a full-stack developer I work on the interface, API, and some of the Python processing pipeline.</p>
           <p style="padding: 10px">The background of this website is <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's game of life</a>.</p>
-          <p style="float: left;padding: 10px"><a href="#" onclick="flip()" class="btn">Send message</a></p>
-          <p style="float: right;padding: 10px"><a class="btn" href="TimRobertFitzgerald.pdf">View resume</a></p>
+          <!-- <p style="float: left;padding: 10px"><a href="#" onclick="flip()" class="btn">Send message</a></p> -->
+          <!-- style="float: right;padding: 10px" -->
+          <p style="text-align: center"><a class="btn" href="TimRobertFitzgerald.pdf">View resume</a></p>
         </div> 
         <div class="face back">
           <h1>Contact me</h1>
@@ -83,8 +62,8 @@ else {
       var x = 0, y = 0, i = 0;
       var num_columns = Math.ceil(w/10);
       var num_rows = Math.ceil(h/10)*10;
-      var alive = '#c0392b';//'#16a085';
-      var dead = '#e74c3c';//'#1abc9c';
+      var alive = '#3498db';//'#c0392b';//'#16a085';
+      var dead = '#2980b9';//'#e74c3c';//'#1abc9c';
       while (true) {
         var fill = (Math.random() > 0.5) ? alive : dead;
         var rect = makeSVG('rect', {x: x, y: y, width: '10px', height: '10px', fill: fill, id: 'row'+(y/10)+'col'+(x/10), border: 'none'});
